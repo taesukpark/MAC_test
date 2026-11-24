@@ -8,9 +8,9 @@ AI(CNN)의 핵심 연산인 **MAC(Multiply-Accumulate)** 을 직접 구현해, �
 
 ## 실행 방법
 ```bash
-python main.py                       # 기본 실행 (data.json 은 main.py 와 같은 폴더, 성능 반복 100회)
+python main.py                       # 기본 실행 (data.json 은 main.py 와 같은 폴더, 성능 반복 10회)
 python main.py --data D:\test\data.json   # data.json 위치를 직접 지정
-python main.py --repeat 10           # 성능 측정 반복 횟수 지정 (기본 100, 과제 최소 기준 100회)
+python main.py --repeat 10           # 성능 측정 반복 횟수 지정 (기본 10, 과제 최소 기준 10회)
 ```
 표준 라이브러리만 사용합니다. (Python 3.8+)
 
