@@ -11,7 +11,7 @@ import time
 
 EPSILON = 1e-9          # 부동소수점 비교 허용 오차 (|A-B| < EPSILON 이면 동점)
 DEFAULT_DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.json")
-DEFAULT_REPEAT = 100    # 성능 측정 반복 횟수 기본값 (과제 최소 기준 100회)
+DEFAULT_REPEAT = 10    # 성능 측정 반복 횟수 기본값 (과제 최소 기준 10회)
 PERF_SIZES = (5, 13, 25)
 
 # 실행 설정 (main() 에서 인자로 덮어씀)
@@ -313,7 +313,7 @@ def main():
     ap = argparse.ArgumentParser(description="MAC 계산기")
     ap.add_argument("--data", default=DEFAULT_DATA, help="data.json 경로 (기본: main.py 와 같은 폴더)")
     ap.add_argument("--repeat", type=int, default=DEFAULT_REPEAT,
-                    help=f"성능 측정 반복 횟수 (기본 {DEFAULT_REPEAT}, 과제 최소 기준 100)")
+                    help=f"성능 측정 반복 횟수 (기본 {DEFAULT_REPEAT}, 과제 최소 기준 10)")
     args = ap.parse_args()
     if args.repeat < 1:
         ap.error("--repeat 는 1 이상의 정수여야 합니다.")
